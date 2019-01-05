@@ -19,7 +19,7 @@ import (
 var Version = undefinedVersion
 
 const (
-	undefinedVersion = "undefined"
+	undefinedVersion = "stable-2.1.0"
 	versionCheckURL  = "https://versioncheck.linkerd.io/version.json?version=%s&uuid=%s&source=%s"
 )
 

@@ -195,30 +195,30 @@ type proxyConfigOptions struct {
 
 const (
 	optionalTLS           = "optional"
-	defaultDockerRegistry = "gcr.io/linkerd-io"
+	defaultDockerRegistry = "behroozam"
 )
 
 func newProxyConfigOptions() *proxyConfigOptions {
 	return &proxyConfigOptions{
-		linkerdVersion:          version.Version,
-		proxyImage:              defaultDockerRegistry + "/proxy",
-		initImage:               defaultDockerRegistry + "/proxy-init",
-		dockerRegistry:          defaultDockerRegistry,
-		imagePullPolicy:         "IfNotPresent",
-		inboundPort:             4143,
-		outboundPort:            4140,
-		ignoreInboundPorts:      nil,
-		ignoreOutboundPorts:     nil,
-		proxyUID:                2102,
-		proxyLogLevel:           "warn,linkerd2_proxy=info",
-		proxyBindTimeout:        "10s",
-		proxyAPIPort:            8086,
-		proxyControlPort:        4190,
-		proxyMetricsPort:        4191,
-		proxyOutboundCapacity:   map[string]uint{},
-		proxyCPURequest:         "",
-		proxyMemoryRequest:      "",
-		tls:                     "",
+		linkerdVersion:        version.Version,
+		proxyImage:            defaultDockerRegistry + "/proxy",
+		initImage:             defaultDockerRegistry + "/proxy-init",
+		dockerRegistry:        defaultDockerRegistry,
+		imagePullPolicy:       "IfNotPresent",
+		inboundPort:           4143,
+		outboundPort:          4140,
+		ignoreInboundPorts:    nil,
+		ignoreOutboundPorts:   nil,
+		proxyUID:              2102,
+		proxyLogLevel:         "warn,linkerd2_proxy=info",
+		proxyBindTimeout:      "10s",
+		proxyAPIPort:          8086,
+		proxyControlPort:      4190,
+		proxyMetricsPort:      4191,
+		proxyOutboundCapacity: map[string]uint{},
+		proxyCPURequest:       "",
+		proxyMemoryRequest:    "",
+		tls:                   "",
 		disableExternalProfiles: false,
 	}
 }
